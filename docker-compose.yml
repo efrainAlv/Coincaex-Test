@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+
+  p1:
+    container_name: p1
+    build: ./p1
+    image: golang-native
+    volumes:
+      - ./p1/src:/usr/src/app
+
+  p2:
+    container_name: p2
+    build: ./p2
+    image: golang-native
+    volumes:
+      - ./p2/src:/usr/src/app
